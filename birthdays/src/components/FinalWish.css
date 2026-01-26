@@ -1,0 +1,136 @@
+/* src/components/FinalWish.css */
+
+.finalwish-section {
+  padding: clamp(3rem, 8vw, 8rem) clamp(1rem, 3vw, 2rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.finalwish-background {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, #fce7f3, #ede9fe, #fce7f3);
+}
+
+.finalwish-container {
+  max-width: 64rem;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.finalwish-icon {
+  margin: 0 auto clamp(1.5rem, 3vw, 2rem);
+  animation: pulse 2s ease-in-out infinite;
+  width: clamp(4rem, 8vw, 6rem);
+  height: clamp(4rem, 8vw, 6rem);
+}
+
+.finalwish-text {
+  font-size: clamp(1.25rem, 3vw, 2.25rem);
+  font-family: 'Playfair Display', serif;
+  color: #1f2937;
+  line-height: 1.75;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  padding: 0 1rem;
+}
+
+.finalwish-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(0.5rem, 1.5vw, 0.75rem);
+  background: linear-gradient(to right, #ec4899, #a855f7);
+  color: white;
+  padding: clamp(1rem, 2.5vw, 1.5rem) clamp(2rem, 5vw, 3rem);
+  border-radius: 9999px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  box-shadow: 0 25px 50px rgba(236, 72, 153, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  width: auto;
+  max-width: 90%;
+}
+
+.finalwish-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 30px 60px rgba(236, 72, 153, 0.4);
+}
+
+.finalwish-button:active {
+  transform: scale(0.98);
+}
+
+.finalwish-button .gift-icon,
+.finalwish-button .sparkle-icon {
+  transition: transform 0.5s ease;
+  width: clamp(1.25rem, 3vw, 1.5rem);
+  height: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+.finalwish-button:hover .gift-icon {
+  transform: rotate(12deg);
+}
+
+.finalwish-button:hover .sparkle-icon {
+  transform: rotate(180deg);
+}
+
+/* Mobile - Small screens */
+@media (max-width: 480px) {
+  .finalwish-section {
+    padding: 3rem 1rem;
+  }
+  
+  .finalwish-text {
+    font-size: 1.25rem;
+    padding: 0 0.5rem;
+  }
+  
+  .finalwish-button {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile - Medium */
+@media (min-width: 481px) and (max-width: 768px) {
+  .finalwish-section {
+    padding: 5rem 1.5rem;
+  }
+  
+  .finalwish-text {
+    font-size: 1.5rem;
+  }
+  
+  .finalwish-button {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.125rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .finalwish-section {
+    padding: 6rem 2rem;
+  }
+  
+  .finalwish-text {
+    font-size: 1.875rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .finalwish-section {
+    padding: 8rem 2rem;
+  }
+  
+  .finalwish-text {
+    font-size: 2.25rem;
+  }
+}

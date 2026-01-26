@@ -1,0 +1,43 @@
+/* src/components/Confetti.css */
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.confetti-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 50;
+}
+
+.confetti-piece {
+  position: absolute;
+  animation: fall linear forwards;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* Mobile optimization */
+@media (max-width: 480px) {
+  .confetti-piece {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+  .confetti-piece {
+    font-size: 1.25rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .confetti-piece {
+    font-size: 1.5rem;
+  }
+}

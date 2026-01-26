@@ -1,0 +1,109 @@
+/* src/pages/BirthdayPage.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.birthday-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #fce7f3, #ede9fe, #fce7f3);
+  overflow-x: hidden;
+}
+
+.birthday-footer {
+  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 3vw, 2rem);
+  text-align: center;
+  background: linear-gradient(to right, #ec4899, #a855f7);
+  color: white;
+}
+
+.footer-message {
+  font-size: clamp(1.125rem, 3vw, 1.5rem);
+  font-family: 'Playfair Display', serif;
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
+  line-height: 1.5;
+  padding: 0 1rem;
+}
+
+.footer-date {
+  font-family: 'Poppins', sans-serif;
+  color: #fbcfe8;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+.footer-hearts {
+  margin-top: clamp(1rem, 2.5vw, 1.5rem);
+  display: flex;
+  justify-content: center;
+  gap: clamp(0.5rem, 1.5vw, 0.75rem);
+  flex-wrap: wrap;
+}
+
+.footer-hearts svg {
+  width: clamp(1.25rem, 3vw, 1.5rem);
+  height: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+.footer-hearts .heart-1 {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.footer-hearts .heart-2 {
+  animation: pulse 2s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+.footer-hearts .heart-3 {
+  animation: pulse 2s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+
+/* Mobile - Small screens */
+@media (max-width: 480px) {
+  .birthday-footer {
+    padding: 2rem 1rem;
+  }
+  
+  .footer-message {
+    font-size: 1.125rem;
+  }
+  
+  .footer-date {
+    font-size: 0.875rem;
+  }
+}
+
+/* Mobile - Medium */
+@media (min-width: 481px) and (max-width: 768px) {
+  .birthday-footer {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .footer-message {
+    font-size: 1.25rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .birthday-footer {
+    padding: 3rem 2rem;
+  }
+  
+  .footer-message {
+    font-size: 1.375rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .birthday-footer {
+    padding: 3rem 2rem;
+  }
+  
+  .footer-message {
+    font-size: 1.5rem;
+  }
+}
